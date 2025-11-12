@@ -3,13 +3,23 @@
     margin: 0;
     padding: 0;
     line-height: 1.5;
+
+    --content-color: #fff;
+    --accent-color: #4DA6FF;
+    --bg-color: #e0e0e0;
+    --card-accent-color: yellow;
+}
+
+h1, h2, h3, h4, h5, h6, 
+input, button, textarea, select {
+  font: inherit;
 }
 
 ul {
     list-style-type: none;
 }
 
-div, nav, ul, li {
+form, div, nav, ul, li {
     border: 1px solid red; /* temporary for grid visualization */
 }
 
@@ -28,7 +38,7 @@ div, nav, ul, li {
     padding: 10px;
 
     color: #fff;
-    background-color: #4DA6FF;
+    background-color: var(--accent-color);
 }
 
 .sidebar-logo {
@@ -52,12 +62,50 @@ div, nav, ul, li {
 
 /* header */
 .header {
-    background-color: #fff;
+    padding: 10px 30px 10px 20px;
+    
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    align-items: center;
+    gap: 10px;
+
+    background-color: var(--content-color);
+}
+
+.header-user-info-small,
+.header-btns {
+    justify-self: end;    
+}
+
+
+.header-search {
+    display: grid;
+}
+
+.header-user-info-small {
+    display: grid;
+}
+
+.header-user-info-large {
+    display: grid;
+    justify-self: start;
+}
+
+.header-btns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.header-btns > .btn {
+    color: #fff;
+    background-color: var(--accent-color);
 }
 
 /* main-content */
 .main-content {
     grid-row: 2 / -1;
     
-    background-color: #e0e0e0;
+    background-color: var(--bg-color);
 }
