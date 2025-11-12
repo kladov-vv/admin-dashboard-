@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    line-height: 1.5;
+}
+
+ul {
+    list-style-type: none;
+}
+
+div {
+    border: 1px solid red; /* temporary for grid visualization */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr) 4fr;
+    grid-template-rows: 1fr 4fr;
+
+    height: 100dvh; /* temporary for grid visualization*/
+}
+
+.sidebar {
+    background-color: #99CCFF;
+
+    grid-row: 1 / -1;
+}
+
+.header {
+    background-color: #fff;
+}
+
+.main-content {
+    background-color: #e0e0e0;
+
+    grid-row: 2 / -1;
+}
