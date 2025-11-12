@@ -31,21 +31,23 @@ div, nav, ul, li {
     background-color: #4DA6FF;
 }
 
-.logo {
+.sidebar-logo {
+    margin-bottom: 20px;
+    
     font-size: 1.6rem;
     font-weight: 700;
 }
 
-.navigation ul {
+.nav-section {
     display: grid;
     gap: 10px;
-}
-
-ul {
-    margin-top: 20px;
 
     font-size: 1.2rem;
     font-weight: 700;
+}
+
+.nav-section + .nav-section {
+    margin-top: 20px;
 }
 
 /* header */
