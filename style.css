@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
     line-height: 1.5;
 }
 
@@ -8,7 +9,7 @@ ul {
     list-style-type: none;
 }
 
-div {
+div, nav, ul, li {
     border: 1px solid red; /* temporary for grid visualization */
 }
 
@@ -20,18 +21,41 @@ div {
     height: 100dvh; /* temporary for grid visualization*/
 }
 
+/* sidebar */
 .sidebar {
-    background-color: #99CCFF;
-
     grid-row: 1 / -1;
+    
+    padding: 10px;
+
+    color: #fff;
+    background-color: #4DA6FF;
 }
 
+.logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.navigation ul {
+    display: grid;
+    gap: 10px;
+}
+
+ul {
+    margin-top: 20px;
+
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* header */
 .header {
     background-color: #fff;
 }
 
+/* main-content */
 .main-content {
-    background-color: #e0e0e0;
-
     grid-row: 2 / -1;
+    
+    background-color: #e0e0e0;
 }
