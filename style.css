@@ -12,7 +12,7 @@
 
 h1, h2, h3, h4, h5, h6, 
 input, button, textarea, select {
-  font: inherit;
+    font: inherit;
 }
 
 ul {
@@ -74,7 +74,7 @@ form, div, nav, ul, li {
 }
 
 .header-user-info-small,
-.header-btns {
+.header-btns-container {
     justify-self: end;    
 }
 
@@ -92,20 +92,61 @@ form, div, nav, ul, li {
     justify-self: start;
 }
 
-.header-btns {
+.header-btns-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 }
 
-.header-btns > .btn {
+.header-btns-container > .header-btn {
     color: #fff;
     background-color: var(--accent-color);
 }
 
 /* main-content */
 .main-content {
+    padding: 20px 10px;
+    
     grid-row: 2 / -1;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: repeat(2, 1fr);    
+    gap: 10px;
     
     background-color: var(--bg-color);
+}
+
+.project-card,
+.ann-board,
+.trend-board {
+    background-color: var(--content-color);
+}
+
+.content-projects {
+    grid-row: 1 / -1;
+}
+
+.projects-board {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.project-card {
+    padding: 10px;
+}
+
+.ann-board {
+    padding: 10px;
+    
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.trend-board {
+    padding: 10px;
+    
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
 }
