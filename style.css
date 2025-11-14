@@ -30,7 +30,7 @@ form, div, nav, ul, li {
 
 .container {
     display: grid;
-    grid-template-columns: minmax(200px, 1fr) 4fr;
+    grid-template-columns: minmax(200px, 1fr) 4fr; /*change min to 'max-content' later*/
     grid-template-rows: 1fr 4fr;
 
     height: 100dvh; /* temporary for grid visualization*/
@@ -90,7 +90,6 @@ form, div, nav, ul, li {
     width: 1.2rem;
 } 
 
-
 /* header */
 .header {
     padding: 10px 30px 10px 20px;
@@ -109,13 +108,39 @@ form, div, nav, ul, li {
     justify-self: end;    
 }
 
-
 .header-search {
     display: grid;
+    grid-template-columns: min-content 1fr;
+    align-items: center;
+    gap: 10px;
 }
+
+.header-search img {
+    width: 1.2rem;
+}
+
+.search-bar {
+    background-color: var(--bg-color);
+
+    padding: 5px 10px;
+    border: none;
+    border-radius: 1rem;
+
+    font-size: 1rem;   
+}
+
+.search-bar:focus {
+    outline: 2px  solid var(--accent-color);
+    outline-offset: -2px;
+}
+
 
 .header-user-info-small {
     display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
 }
 
 .header-user-info-large {
