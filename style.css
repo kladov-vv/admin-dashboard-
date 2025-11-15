@@ -24,7 +24,7 @@ ul {
     list-style-type: none;
 }
 
-form, div, nav, ul, li {
+form, div, nav, ul, li, a {
     border: 1px solid red; /* temporary for grid visualization */
 }
 
@@ -36,7 +36,7 @@ form, div, nav, ul, li {
     height: 100dvh; /* temporary for grid visualization*/
 }
 
-/* sidebar */
+/* SIDEBAR */
 .sidebar {
     grid-row: 1 / -1;
     
@@ -55,10 +55,11 @@ form, div, nav, ul, li {
 
 .sidebar-logo a {
     display: grid;
-    grid-auto-flow: column;
-    justify-content: start;
+    grid-template-columns: min-content 1fr; 
     align-items: center;
     gap: 10px;
+    
+    width: min-content;
 }
 
 .sidebar-logo img {
@@ -67,8 +68,8 @@ form, div, nav, ul, li {
 
 .nav-section {
     display: grid;
-    gap: 10px;
     justify-items: start;
+    gap: 10px;
 
     font-size: 1.2rem;
     font-weight: 700;
@@ -80,8 +81,7 @@ form, div, nav, ul, li {
 
 .nav-section a {
     display: grid;
-    grid-auto-flow: column;
-    justify-content: start;
+    grid-template-columns: min-content 1fr;
     align-items: center;
     gap: 10px;
 }
@@ -90,20 +90,19 @@ form, div, nav, ul, li {
     width: 1.2rem;
 } 
 
-/* header */
+/* HEADER */
 .header {
-    padding: 10px 30px 10px 20px;
-    
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 2fr;
     align-items: center;
-    gap: 10px;
-
+    gap: 30px 20px;
+    
     background-color: var(--content-color);
+
+    padding: 10px;
 }
 
-.header-user-info-small,
+.header-user-info,
 .header-btns-container {
     justify-self: end;    
 }
@@ -134,32 +133,72 @@ form, div, nav, ul, li {
     outline-offset: -2px;
 }
 
-
-.header-user-info-small {
+.header-user-info {
     display: grid;
-    grid-auto-flow: column;
-    justify-content: start;
+    grid-template-columns: min-content min-content 1fr;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-user-info button {
+    display: grid;
+    border: none;
+    background-color: #fff;
+}
+
+.header-user-info .notif-switch {
+    width: 1.2rem;
+}
+
+.header-user-info .user-avatar-small {
+    width: 2.5rem;
+    border-radius: 50%;
+}
+
+.header-user-info p {
+    font-weight: 700;
+}
+
+.header-user-greeting {
+    display: grid;
+    grid-template-columns: min-content 1fr;
     align-items: center;
     gap: 10px;
 }
 
-.header-user-info-large {
-    display: grid;
-    justify-self: start;
+.header-user-greeting .user-avatar-large {
+    width: 4rem;
+    border-radius: 50%;
+}
+
+.header-user-greeting p {
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+.header-user-greeting .user-name {
+    font-size: 1.2rem;
 }
 
 .header-btns-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 16px;
 }
 
 .header-btns-container > .header-btn {
     color: #fff;
     background-color: var(--accent-color);
+
+    font-size: 1rem;
+    font-weight: 700;
+
+    padding: 6px 20px;
+    border: none;
+    border-radius: 1.2rem;
 }
 
-/* main-content */
+/* MAIN CONTENT */
 .main-content {
     padding: 20px 10px;
     
