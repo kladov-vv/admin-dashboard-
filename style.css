@@ -36,7 +36,7 @@ button:hover {
 .container {
     display: grid;
     grid-template-columns: minmax(200px, 1fr) 4fr; /*change min to 'max-content' later*/
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: min-content 1fr;
 
     height: 100dvh; /* temporary for grid visualization*/
 }
@@ -99,6 +99,7 @@ button:hover {
 .header {
     display: grid;
     grid-template-columns: 2fr 1fr;
+    align-content: space-between;
     align-items: center;
     gap: 30px 20px;
     
@@ -269,16 +270,16 @@ button:hover {
 
 /* announcements*/
 .ann-board {
-    padding: 10px;
-    
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
+    
+    padding: 15px;
 }
 
+/* trending */
 .trend-board {
-    padding: 10px;
-    
     display: grid;
     grid-template-rows: repeat(4, 1fr);
     gap: 10px;
+
+    padding: 10px;
 }
