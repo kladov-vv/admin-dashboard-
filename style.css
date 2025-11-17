@@ -209,7 +209,7 @@ button:hover {
     grid-row: 2 / -1;
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: repeat(2, 1fr);    
+    grid-template-rows: repeat(2, min-content);    
     gap: 10px;
     
     padding: 20px 10px;
@@ -231,7 +231,7 @@ button:hover {
 
 .projects-board {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-auto-rows: 1fr;
     gap: 10px;
 }
@@ -307,4 +307,17 @@ button:hover {
     gap: 10px;
 
     padding: 10px;
+}
+
+.trend-project {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    align-items: center;
+    gap: 10px;
+}
+
+.trend-project img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
 }
