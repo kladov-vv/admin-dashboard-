@@ -24,14 +24,14 @@ ul {
     list-style-type: none;
 }
 
-form, div, nav, ul, li, a {
-    border: 1px solid red; /* temporary for grid visualization */
-}
-
 button:hover {
     cursor: pointer;
 }
 
+/* temporary for grid visualization */
+/* form, div, nav, ul, li, a {
+    border: 1px solid red; 
+} */
 
 .container {
     display: grid;
@@ -270,10 +270,35 @@ button:hover {
 
 /* announcements*/
 .ann-board {
-    display: grid;
-    
+    display: grid;    
     padding: 15px;
 }
+
+.ann-wrapper {
+    padding: 10px;
+}
+
+.ann-wrapper:first-child {
+    padding-top: 0px;
+}
+
+.ann-wrapper:last-child {
+    padding-bottom: 0px;
+}
+
+.ann-wrapper + .ann-wrapper {
+    border-top: 2px solid var(--bg-color);
+}
+
+.ann-wrapper h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.ann-wrapper p {
+    font-size: 0.9rem;
+}
+
 
 /* trending */
 .trend-board {
