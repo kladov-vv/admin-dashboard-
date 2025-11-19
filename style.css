@@ -43,6 +43,17 @@ button:hover {
     height: 100dvh; /* temporary for grid visualization*/
 }
 
+.icon-btn {
+    background: none;
+    border: none;
+    line-height: 0;
+}
+
+.avatar {
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+}
+
 /* SIDEBAR */
 .sidebar {
     grid-row: 1 / -1;
@@ -148,19 +159,12 @@ button:hover {
     gap: 20px;
 }
 
-.header-user-info button {
-    border: none;
-    background-color: #fff;
-    line-height: 0;
-}
-
-.header-user-info .notif-switch-icon {
+.header-user-info .icon-btn img {
     width: 1.2rem;
 }
 
 .header-user-info .user-avatar-small {
     width: 2.5rem;
-    border-radius: 50%;
 }
 
 .header-user-info p {
@@ -176,7 +180,6 @@ button:hover {
 
 .header-user-greeting .user-avatar-large {
     width: 4rem;
-    border-radius: 50%;
 }
 
 .header-user-greeting p {
@@ -260,12 +263,6 @@ button:hover {
     gap: 10px;
 }
 
-.card-btn {
-    background: none;
-    border: none;
-    line-height: 0;
-}
-
 .card-btn img{
     width: 1.2rem;
 }
@@ -301,7 +298,6 @@ button:hover {
     font-size: 0.9rem;
 }
 
-
 /* trending */
 .trend-board {
     display: grid;
@@ -320,6 +316,4 @@ button:hover {
 
 .trend-project img {
     width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
 }
