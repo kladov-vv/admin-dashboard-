@@ -9,7 +9,7 @@
     --content-color: #fff;
     --accent-color: #4DA6FF;
     --bg-color: #e0e0e0;
-    --card-accent-color: yellow;
+    --card-accent-color: orange;
 }
 
 h1, h2, h3, h4, h5, h6, 
@@ -31,16 +31,16 @@ button:hover {
 }
 
 /* temporary for grid visualization */
-/* form, div, nav, ul, li, a {
-    border: 1px solid red; 
-} */
+* {
+    outline: 1px solid red; 
+}
 
 .container {
     display: grid;
-    grid-template-columns: minmax(200px, 1fr) 4fr; /*change min to 'max-content' later*/
+    grid-template-columns: minmax(min-content, 280px) 1fr;
     grid-template-rows: min-content 1fr;
 
-    height: 100dvh; /* temporary for grid visualization*/
+    height: 100dvh;
 }
 
 .icon-btn {
@@ -58,50 +58,52 @@ button:hover {
 .sidebar {
     grid-row: 1 / -1;
     
-    padding: 10px;
+    padding: 16px;
+    padding-right: 24px;
 
     color: #fff;
     background-color: var(--accent-color);
 }
 
-.sidebar-logo {
-    margin-bottom: 20px;
-    
-    font-size: 1.6rem;
-    font-weight: 700;
-}
-
-.sidebar-logo a {
+.sidebar a {
     display: grid;
     grid-template-columns: min-content 1fr; 
     align-items: center;
+
+    width: min-content;
+}
+
+/* sidebar logo */
+.sidebar-logo {
     gap: 10px;
     
-    width: min-content;
+    margin-bottom: 30px;
+    
+    font-size: 1.6rem;
+    font-weight: 700;
 }
 
 .sidebar-logo img {
     width: 2.5rem;
 }
 
+/* sidebar nav */
 .nav-section {
     display: grid;
-    justify-items: start;
     gap: 10px;
 
     font-size: 1.2rem;
     font-weight: 700;
+
+    padding-left: 10px;
 }
 
 .nav-section + .nav-section {
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .nav-section a {
-    display: grid;
-    grid-template-columns: min-content 1fr;
-    align-items: center;
-    gap: 10px;
+    gap: 20px;
 }
 
 .nav-section img {
@@ -246,7 +248,7 @@ button:hover {
     align-content: space-between;
     gap: 10px;
 
-    border-left: orange solid 5px;
+    border-left: var(--card-accent-color) solid 5px;
 
     padding: 10px;
 }
