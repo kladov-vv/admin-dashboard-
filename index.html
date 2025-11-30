@@ -8,6 +8,29 @@
 </head>
 <body>
     <div class="container">
+        <div class="header">
+            <form action="" method="post" class="header-search">
+                <img src="images/icons/magnify.svg" alt="search-icon">
+                <input type="search" class="search-bar">
+            </form>
+            <div class="header-user-info-small">
+                <button class="icon-btn notif-btn"><img src="images/icons/bell-ring-outline.svg" alt="notifications"></button>
+                <img src="images/user-avatar/cat-avater.jpg" alt="your avatar" class="avatar user-avatar">
+                <span class="user-name">Morgan Oakley</span>
+            </div>
+            <div class="header-user-info-large">
+                <img src="images/user-avatar/cat-avater.jpg" alt="your avatar" class="avatar user-avatar">
+                <div class="user-greeting">
+                    Hi there,<br>
+                    <span class="user-name">Morgan Oakley (@morgan)</span>
+                </div>              
+            </div>
+            <div class="header-btn-container">
+                <button class="header-btn">New</button>
+                <button class="header-btn">Upload</button>
+                <button class="header-btn">Share</button>
+            </div>
+        </div>
         <div class="sidebar">
             <a href="" class="sidebar-logo"><img src="images/icons/view-dashboard.svg" alt="dashboard logo">Dashboard</a>
             <nav class="sidebar-nav">
@@ -17,7 +40,7 @@
                     <li><a href=""><img src="images/icons/nav-icons/message.svg" alt="messages icon">Messages</a></li>
                     <li><a href=""><img src="images/icons/nav-icons/clock-time-three.svg" alt="history icon">History</a></li>
                     <li><a href=""><img src="images/icons/nav-icons/note-multiple.svg" alt="tasks icon">Tasks</a></li>
-                    <li><a href=""><img src="images/icons/nav-icons/account-group.svg" alt="community icon">Community</a></li>
+                    <li><a href=""><img src="images/icons/nav-icons/account-group.svg" alt="community icon">Communities</a></li>
                 </ul>
                 <ul class="nav-section">
                     <li><a href=""><img src="images/icons/nav-icons/cog.svg" alt="settings icon">Settings</a></li>
@@ -26,30 +49,7 @@
                 </ul>
             </nav>
         </div>
-        <div class="header">
-                <form action="" class="header-search">
-                <img src="images/icons/magnify.svg" alt="search icon">
-                <input type="search" class="search-bar">
-            </form>
-            <div class="header-user-info">
-                <button class="icon-btn notif-switch"><img src="images/icons/bell-ring-outline.svg" alt="notifications switch"></button>
-                <img src="images/user-avatar/cat-avater.jpg" alt="your avatar" class="avatar user-avatar-small">
-                <p class="user-name">Morgan Oakley</p>
-            </div>
-            <div class="header-user-greeting">
-                <img src="images/user-avatar/cat-avater.jpg" alt="your avatar" class="avatar user-avatar-large">
-                <div>
-                    <p>Hi there,</p>
-                    <p class="user-name">Morgan Oakley (<span class="profile-name">@morgan</span>)</p>
-                </div>              
-            </div>
-            <div class="header-btns-container">
-                <button class="header-btn">New</button>
-                <button class="header-btn">Upload</button>
-                <button class="header-btn">Share</button>
-            </div>
-        </div>
-        <div class="main-content">
+        <div class="content">
             <div class="content-projects">
                 <h2>Your Projects</h2>
                 <div class="projects-board">
@@ -134,7 +134,7 @@
                     </div>
                     <div class="ann-wrapper">
                         <h4>Updated Privacy Policy</h4>
-                        <p>Aliquam erat nulla, facilisis quis sagittis non, hendrerit vitae eros. Cras porttitor elementum nisl a cursus.</p>   
+                        <p>Aliquam erat nulla, facilisis quis sagittis non, hendrerit vitae eros. Cras porttitor elementum nisl a cursus.</p>
                     </div>
                 </div>
             </div>
@@ -144,29 +144,29 @@
                     <div class="trend-project">
                         <img src="images/trend-users-pics/dog-avatar.jpg" alt="@tegan avatar" class="avatar">
                         <div class="trend-info">
-                            <p>@tegan</p>
-                            <p>World Peace Builder</p>
+                            <p class="trend-user-name">@tegan</p>
+                            <p class="trend-project-name">World Peace Builder</p>
                         </div>
                     </div>
                     <div class="trend-project">
                         <img src="images/user-avatar/cat-avater.jpg" alt="your avatar" class="avatar">
                         <div class="trend-info">
-                            <p>@morgan</p>
-                            <p>Super Cool Project</p>
+                            <p class="trend-user-name">@morgan</p>
+                            <p class="trend-project-name">Super Cool Project</p>
                         </div>
                     </div>
                     <div class="trend-project">
                         <img src="images/trend-users-pics/alien-avatar.jpg" alt="@kendall avatar" class="avatar">
                         <div class="trend-info">
-                            <p>@kendall</p>
-                            <p>Life Changing App</p>
+                            <p class="trend-user-name">@kendall</p>
+                            <p class="trend-project-name">Life Changing App</p>
                         </div>
                     </div>
                     <div class="trend-project">
                         <img src="images/trend-users-pics/penguin-avatar.jpg" alt="@alex avatar" class="avatar">
                         <div class="trend-info">
-                            <p>@alex</p>
-                            <p>No Traffic Maker</p>
+                            <p class="trend-user-name">@alex</p>
+                            <p class="trend-prject-name">No Traffic Maker</p>
                         </div>
                     </div>
                 </div>
