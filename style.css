@@ -9,7 +9,7 @@
     --accent-color: #4DA6FF;
     --bg-color: #e0e0e0;
     --shadow-color: rgb(80 80 80 / 50%);
-    --card-accent-color: orange;
+    --card-accent-color: #ffa500;
 }
 
 h1, h2, h3, h4, h5, h6, 
@@ -45,19 +45,19 @@ button:hover {
 .icon-btn {
     background: none;
     border: none;
+    border-radius: 8px;
+    padding: 4px;
     line-height: 0;
 }
 
-.avatar {
-    border-radius: 50%;
-    aspect-ratio: 1;
-    object-fit: cover;
+.icon-btn:hover {
+    outline: var(--shadow-color) 1px solid;
 }
 
-.project-card,
-.ann-board,
-.trend-board {
-    box-shadow: var(--shadow-color) 5px 5px 5px;
+.avatar {
+    aspect-ratio: 1;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 /* HEADER */
@@ -69,12 +69,12 @@ button:hover {
     gap: 20px;
 
     padding: 12px 60px 12px 40px;
+    box-shadow: var(--shadow-color) 0px 5px 5px;
 
     background-color: var(--main-color);
     
     font-weight: 600;
 
-    box-shadow: var(--shadow-color) 0px 5px 5px;
 }
 
 .header-user-info-small,
@@ -86,17 +86,16 @@ button:hover {
     font-weight: 700;
 }
 
-.header-search img,
-.notif-btn img {
-    width: 1.25rem;
-}
-
 /* header search */
 .header-search {
     display: grid;
     grid-template-columns: min-content 1fr;
     align-items: center;
     gap: 12px;
+}
+
+.header-search img {
+    width: 1.375rem;
 }
 
 .search-bar {
@@ -107,6 +106,10 @@ button:hover {
     border-radius: 2rem;
 
     font-weight: 400;
+}
+
+.search-bar:hover {
+    outline: 1px solid var(--shadow-color);
 }
 
 .search-bar:focus {
@@ -125,6 +128,10 @@ button:hover {
 
 .header-user-info-small .user-avatar {
     width: 2.5rem;
+}
+
+.notif-btn img {
+    width: 1.25rem;
 }
 
 /* header user info large */
@@ -152,7 +159,7 @@ button:hover {
     gap: 24px;
 }
 
-.header-btn-container > .header-btn {
+.header-btn {
     width: 100px;
 
     border: none;
@@ -161,6 +168,10 @@ button:hover {
 
     color: #fff;
     background-color: var(--accent-color);
+}
+
+.header-btn:hover {
+    text-decoration: underline;
 }
 
 /* SIDEBAR */
@@ -246,6 +257,7 @@ button:hover {
     border-radius: 10px;
     padding: 20px;
     background-color: var(--main-color);
+    box-shadow: var(--shadow-color) 5px 5px 5px;
 }
 
 .project-card p,
